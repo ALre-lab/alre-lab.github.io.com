@@ -1,0 +1,156 @@
+/* Estilos base */
+body {
+  font-family: 'Playfair', serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background: #585859;
+}
+
+header {
+  background: url(aboacia.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  flex-wrap: wrap;
+}
+
+.menu h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+a:hover {
+  color: #b28405;
+}
+
+#selected {
+  color: #b28405;
+}
+
+.titular {
+  text-align: center;
+  margin-top: 13%;
+}
+
+.titular h2 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.titular h3 {
+  font-size: 25px;
+  margin: 10px 0 30px;
+}
+
+.nt {
+  color: white;
+  background-color: red;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .titular {
+    margin-top: 40%;
+    padding: 0 10px;
+  }
+
+  .titular h2 {
+    font-size: 36px;
+  }
+
+  .titular h3 {
+    font-size: 18px;
+  }
+
+  .nt {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+/* Menú hamburguesa */
+.menu-icon {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .responsive-nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding: 10px 0;
+    margin-top: 10px;
+     z-index: 1;
+  }
+
+  #menu-toggle:checked + .menu-icon + nav.responsive-nav ul {
+    display: flex;
+  }
+
+  .responsive-nav ul li {
+    padding: 10px 0;
+  }
+
+  .responsive-nav ul li a {
+    font-size: 18px;
+  }
+}
