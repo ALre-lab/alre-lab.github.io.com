@@ -1,0 +1,133 @@
+.parrafo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.parrafo div{
+    width: 23%;
+    padding: 38px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    color: aliceblue;
+}
+.rosado{background-color: palevioletred;}
+
+.morado{background-color: blueviolet;}
+
+.morado img{float: right;}
+
+.rosado img{float: right;}
+
+h2{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+}
+
+.auto{
+    width: 800px;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+    
+}
+
+.auto ul{ 
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 16s infinite linear;
+    
+}
+.auto li{
+    list-style: none;
+    width: 100%;
+    
+}
+
+
+@keyframes slide {
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    95%{margin-left: -300%;}
+    
+    
+}
+/* Responsividad para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .titular {
+    margin-top: 40%;
+    padding: 0 10px;
+  }
+
+  .titular h2 {
+    font-size: 36px;
+  }
+
+  .titular h3 {
+    font-size: 18px;
+  }
+
+  .nt {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+/* Menú hamburguesa */
+.menu-icon {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .responsive-nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+   
+  }
+
+  #menu-toggle:checked + .menu-icon + nav.responsive-nav ul {
+    display: flex;
+  }
+
+  .responsive-nav ul li {
+    padding: 10px 0;
+  }
+
+  .responsive-nav ul li a {
+    font-size: 18px;
+  }
+}

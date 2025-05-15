@@ -1,0 +1,117 @@
+body {
+    font-family: 'Playfair';
+    margin: 0;
+    padding: 0;
+    background-color: #585859;
+}
+header{
+    background: url(simbolo.jpg);
+
+    background-size: cover;
+}
+h1{
+    text-align: center;
+}
+.ambos{
+    display: flex;
+    justify-content: space-between;
+    align-items: normal;
+}
+
+.tt{
+    text-align: justify;
+    margin-left: 7%;
+    margin-right: 55%;
+    font-size: 20px;
+    border: grey 15px double;
+    padding: 20px 20px;
+    background-color: #d2d7db ;
+    color: black;
+}
+
+h2{
+    font-size: 40px;
+    margin-left: 15%;
+}
+
+.eee{
+    text-align: justify;
+    margin-left: 55%;
+    margin-right: 7%;
+    font-size: 20px;
+    margin-top: -20%;
+      
+}
+h3{
+    text-align: center;
+}
+/* Responsividad para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .titular {
+    margin-top: 40%;
+    padding: 0 10px;
+  }
+
+  .titular h2 {
+    font-size: 36px;
+  }
+
+  .titular h3 {
+    font-size: 18px;
+  }
+
+  .nt {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+/* Menú hamburguesa */
+.menu-icon {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .responsive-nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+   
+  }
+
+  #menu-toggle:checked + .menu-icon + nav.responsive-nav ul {
+    display: flex;
+  }
+
+  .responsive-nav ul li {
+    padding: 10px 0;
+  }
+
+  .responsive-nav ul li a {
+    font-size: 18px;
+  }
+}

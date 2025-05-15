@@ -1,0 +1,158 @@
+body{  font-family: 'Playfair';
+    margin: 0;
+    padding: 0;
+    background-color: #d2d7db;
+}
+header{
+    background: url(rupo.webp);
+    height: 80vh;
+    background-size: cover;
+}
+li { list-style: none;
+    margin-right: 25px;
+}
+    
+.menu { display: flex;
+justify-content: space-between;
+align-items: center;
+color: aliceblue;
+text-decoration: none;
+ }
+ ul { display: flex;}
+
+ a { text-decoration: none;
+    color: white; 
+}
+h2{
+    font-size: 40px;
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+.img{
+
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.img div{
+    width: 23%;
+    padding: 38px;
+}
+
+a:hover{
+    color: #b28405;
+}
+
+#selected{
+    color: #b28405;
+   
+}
+
+form{
+    background-color: black;
+    padding: 20px;
+    color: #999;
+    width: 300px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.formulario p{
+    text-align: center;
+    font-size: 24px;
+    color: aliceblue;
+}
+.menu img{
+    margin-left: 4%;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+.field{
+    border: solid 1px;
+    padding: 10px ;
+    width: 280px;
+}
+
+
+.bot{
+    color: aliceblue;
+    font-size: 14px;
+    padding:10px 20px 10px 20px;
+    background: red;
+    width: 250px;
+
+    }
+/* Responsividad para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .titular {
+    margin-top: 40%;
+    padding: 0 10px;
+  }
+
+  .titular h2 {
+    font-size: 36px;
+  }
+
+  .titular h3 {
+    font-size: 18px;
+  }
+
+  .nt {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+/* Menú hamburguesa */
+.menu-icon {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .responsive-nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+   
+  }
+
+  #menu-toggle:checked + .menu-icon + nav.responsive-nav ul {
+    display: flex;
+  }
+
+  .responsive-nav ul li {
+    padding: 10px 0;
+  }
+
+  .responsive-nav ul li a {
+    font-size: 18px;
+  }
+}
